@@ -1,0 +1,63 @@
+<form aria-label="User Information and Preferences">
+    <!-- Email Input -->
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required aria-required="true"><br><br>
+
+    <!-- Number Input -->
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1" max="10" step="1" required aria-required="true"><br><br>
+
+    <!-- Date Input -->
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" name="date" placeholder="YYYY-MM-DD" min="2024-01-01" max="2025-12-31" required aria-required="true"><br><br>
+
+    <!-- Range Input -->
+    <label for="range">Rating:</label>
+    <input type="range" id="range" name="range" min="0" max="100" value="50" oninput="document.getElementById('rangeValue').value = this.value" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+    <output id="rangeValue" aria-live="polite">50</output><br><br>
+
+    <!-- Color Input -->
+    <label for="color">Choose Color:</label>
+    <input type="color" id="color" name="color" value="#ffe800"><br><br>
+
+    <!-- Select Menu for Favorite Programming Language -->
+    <label for="language">Favorite Programming Language:</label>
+    <select id="language" name="language" aria-required="true">
+        <option value="">Select a language</option>
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="csharp">C#</option>
+        <option value="ruby">Ruby</option>
+    </select><br><br>
+
+    <!-- Radio Buttons for Expertise Level -->
+    <fieldset aria-labelledby="expertiseLegend">
+        <legend id="expertiseLegend">Level of Expertise:</legend>
+        <label>
+            <input type="radio" name="expertise" value="beginner" aria-checked="false"> Beginner
+        </label><br>
+        <label>
+            <input type="radio" name="expertise" value="intermediate" aria-checked="false"> Intermediate
+        </label><br>
+        <label>
+            <input type="radio" name="expertise" value="advanced" aria-checked="false"> Advanced
+        </label>
+    </fieldset><br>
+
+    <!-- Checkboxes for Preferred Development Platforms -->
+    <fieldset aria-labelledby="platformLegend">
+        <legend id="platformLegend">Preferred Development Platforms:</legend>
+        <label>
+            <input type="checkbox" name="platform" value="web" aria-checked="false"> Web
+        </label><br>
+        <label>
+            <input type="checkbox" name="platform" value="mobile" aria-checked="false"> Mobile
+        </label><br>
+        <label>
+            <input type="checkbox" name="platform" value="desktop" aria-checked="false"> Desktop
+        </label>
+    </fieldset><br>
+
+    <button type="submit">Submit All</button>
+</form>

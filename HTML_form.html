@@ -1,0 +1,24 @@
+<form>
+    <!-- Email Input -->
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+    <!-- Number Input -->
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1" max="10" step="1" required><br><br>
+
+    <!-- Date Input -->
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" name="date" placeholder="YYYY-MM-DD" min="2024-01-01" max="2025-12-31" required><br><br>
+
+    <!-- Range Input -->
+    <label for="range">Rating:</label>
+    <input type="range" id="range" name="range" min="0" max="100" value="50" oninput="document.getElementById('rangeValue').value = this.value">
+    <output id="rangeValue">50</output><br><br>
+
+    <!-- Color Input -->
+    <label for="color">Choose Color:</label>
+    <input type="color" id="color" name="color" value="#ffe800"><br><br>
+
+    <button type="submit">Submit All</button>
+</form>
